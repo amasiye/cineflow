@@ -17,7 +17,7 @@ $db_host = '127.0.0.1';
 $db_user = 'root';
 
 /** MySQL database password */
-$db_pass = 'mtFE2MVsM8yFRaBN';
+$db_pass = '';
 
 /** MySQL database name */
 $db_name = 'cineflow_v3';
@@ -29,7 +29,7 @@ $db_charset = 'utf8';
 $db_collate = '';
 
 /** The base path (or absolute path) to the site's root directory. */
-define('BASEPATH',              "http://localhost/atatusoft/cineflow/");
+define('BASEPATH',              "http://localhost/cineflow/");
 define('CDNPATH',               BASEPATH . "app/content/");
 define('COMPONENTPATH',         'app/components/');
 define('SRC_JS_JQUERY',         'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
