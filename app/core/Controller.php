@@ -13,6 +13,7 @@ class Controller
 
   public function view($view, $data = [])
   {
+    global $session, $app, $db;
     $header = 'header.php';
     $footer = 'footer.php';
 

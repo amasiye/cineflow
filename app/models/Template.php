@@ -70,10 +70,11 @@ class Template
 
   public static function load_component($name)
   {
+    global $session;
     switch ($name)
     {
       case 'navbar':
-        include_once $name . '.php';
+        include_once COMPONENTPATH . $name . '.php';
         break;
 
       default:
