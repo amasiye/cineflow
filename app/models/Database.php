@@ -79,6 +79,7 @@ class Database
   public function select(string $args, $seperator = '/')
   {
     $args = explode($seperator, $args);
+    // var_dump($args); exit;
     $sql = "SELECT ";
 
     # $columns/$table/$where
@@ -104,6 +105,7 @@ class Database
     }
 
     $result = $this->query($sql);
+    // var_dump($sql); exit;
     $rows = [];
 
     if($result)

@@ -24,6 +24,11 @@ class User
 
   } // end __construct()
 
+  public function save()
+  {
+
+  } // end save()
+
   public static function get(array $args = [])
   {
     global $db;
@@ -65,14 +70,16 @@ class User
     return $db->select($sql);
   } // end get()
 
-  public static function set(array $args = [], array $where = [])
+  public static function set(array $args = [])
   {
+    $where = (key_exists('where', $args))? : null;
+
     if(empty($where))
     {
       return STATUS_BAD_REQUEST;
     }
 
-    
+
   } // end set()
 
   public static function register($login, $password, $email, array $args = [])

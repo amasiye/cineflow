@@ -4,7 +4,7 @@ class Controller
 {
   public $db;
   public $session;
-  
+
   public function model($model)
   {
     require_once 'app/models/' . $model . '.php';
@@ -28,6 +28,7 @@ class Controller
       $footer = $data['footer'];
     }
 
+    Router::resolve_content_type();
     Template::head($header);
     require_once 'app/views/' . $view . '.php';
     Template::foot($footer);

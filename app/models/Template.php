@@ -3,8 +3,23 @@
 /**
  * View template class.
  */
-class Template
+class Template implements iModel
 {
+  public function save()
+  {
+
+  } // end save()
+
+  public function set(array $args = [])
+  {
+
+  } // end set()
+
+  public function get(array $args = [])
+  {
+
+  }
+
   public static function head($header = 'header.php')
   {
     if(empty($header))
