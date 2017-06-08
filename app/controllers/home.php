@@ -10,6 +10,12 @@ class Home extends Controller
     $this->session->user = $user;
     $this->view('home/index', ['name'=>$user->name]);
   }
-}
+
+  public function login()
+  {
+    $session = $this->session;
+    $this->view('home/login');
+  } // end login()
+} // end Home{}
 
 ?>

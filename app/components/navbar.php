@@ -1,21 +1,25 @@
 <nav class="navbar navbar-inverse">
-  <div class="contrainer-fluid">
-    <div class="navbar-header"><a class="navbar-brand">Cineflow</a></div>
-  </div>
-  <?php if($session->has_active_user()): ?>
-  <form class="navbar-form navbar-right">
-    <div class="form-group">
-      <input type="search" name="search" class="form-control" placeholder="Search Title, Person or Genre">
-
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><?= APP_NAME; ?></a>
     </div>
-  </form>
-  <ul class="nav navbar-nav navbar-right">
-    <li>Notiications</li>
-    <li>Account</li>
-  </ul>
-    <? else: ?>
-  <ul class="nav navbar-nav navbar-right">
-    <li>Login</li>
-  </ul>
-<?php endif; ?>
-</nab>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <?php if($session->has_active_user()): ?>
+      <ul class="nav navbar-nav">
+        <li><a href="#">Notiications</a></li>
+        <li><a href="#">Account</a></li>
+      </ul>
+      <?php else: ?>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+      <?php endif; ?>
+    </div>
+  </div>
+</nav>

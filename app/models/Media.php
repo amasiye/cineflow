@@ -19,17 +19,17 @@ class Media implements iModel
   {
   } // end __construct()
 
-  public static function
-
-  public static function get(string $args, $delimiter = '/')
+  public function save()
   {
+  } // end save()
 
+  public static function get(array $args = [])
+  {
   } // end get()
 
-  public static function set(array $args)
+  public static function set(array $args = [])
   {
-
-  }
+  } // end set()
 } // end Media{}
 
 

@@ -50,6 +50,7 @@ class Router
         break;
 
       default:
+        header('Content-Type: text/html');
         break;
     }
     // substr($url, (strrpos($url, '.jpg')));

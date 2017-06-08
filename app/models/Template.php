@@ -54,7 +54,7 @@ class Template implements iModel
 
     foreach($paths as $path)
     {
-      echo "<link rel='styelsheet' href='{$path}'>" . PHP_EOL;
+      ?><link rel="stylesheet" href="<?= trim($path); ?>"><?php echo PHP_EOL;
     }
   } // end load_styles()
 
@@ -79,7 +79,7 @@ class Template implements iModel
 
     foreach($paths as $path)
     {
-      echo "<script src='{$path}'></script>" . PHP_EOL;
+      ?><script src="<?= trim($path) ?>"></script><?php echo PHP_EOL;
     }
   } // end load_scripts()
 

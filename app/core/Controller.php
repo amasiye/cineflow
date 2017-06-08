@@ -17,13 +17,14 @@ class Controller
     $header = 'header.php';
     $footer = 'footer.php';
 
-    # Load header
-    if(key_exists('header', $data))
+    # Load specific header
+    if(key_exists('header', $data) && !empty($data['header']))
     {
       $header = $data['header'];
     }
 
-    if(key_exists('footer', $data))
+    # Load specific footer
+    if(key_exists('footer', $data) && !empty($data['footer']))
     {
       $footer = $data['footer'];
     }
