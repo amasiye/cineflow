@@ -70,5 +70,12 @@ define('TABLE_CATEGORY',    TABLE_PREFIX . 'categories');
 define('TABLE_USERS',       TABLE_PREFIX . 'users');
 define('TABLE_OPTIONS',     TABLE_PREFIX . 'options');
 
+define('VALIDATE_TEXT',     0);
+define('VALIDATE_EMAIL',    1);
+define('VALIDATE_USERNAME', 2);
+define('VALIDATE_POSTAL',   3);
+define('VALIDATE_PHONE',    4);
+define('VALIDATE_NAME',     5);
+
 require_once "Status.php";
 ?>

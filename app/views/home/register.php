@@ -15,45 +15,45 @@
         </div>
         <!-- First Name -->
         <div class="col-xs-12 col-sm-6">
-          <div class="form-group">
+          <div class="form-group has-feedback">
             <label for="first-name">First Name</label>
-            <input type="text" class="form-control" name="first-name" placeholder="First Name">
+            <input type="text" class="form-control" name="first-name" placeholder="First Name" required>
           </div>
         </div>
         <!-- Last Name -->
         <div class="col-xs-12 col-sm-6">
-          <div class="form-group">
+          <div class="form-group has-feedback">
             <label for="last-name">Last Name</label>
-            <input type="text" class="form-control" name="last-name" placeholder="Last Name">
+            <input type="text" class="form-control" name="last-name" placeholder="Last Name" required>
           </div>
         </div>
         <!-- Username -->
         <div class="col-xs-12">
-          <div class="form-group">
+          <div class="form-group has-feedback">
             <label for="username">User</label>
-            <input type="text" class="form-control" name="username" placeholder="Username">
+            <input type="text" class="form-control" name="username" placeholder="Username" required>
           </div>
         </div>
         <!-- Email -->
         <div class="col-xs-12">
-          <div class="form-group">
+          <div class="form-group has-feedback">
             <label for="email">Email</label>
-            <input type="emil" class="form-control" name="email" placeholder="Email">
+            <input type="emil" class="form-control" name="email" placeholder="Email" required>
           </div>
         </div>
         <!-- Password -->
         <div class="col-xs-12 padding-bottom-32">
-          <div class="form-group">
+          <div class="form-group has-feedback">
             <label for="password">Password</label>
-            <input type="password" class="form-control" name="password" title="Minimum 6 characters" placeholder="Password (minimum 6 characters)">
+            <input type="password" class="form-control" name="password" title="Minimum 6 characters" placeholder="Password (minimum 6 characters)" required>
           </div>
         </div>
 
         <!-- Repeat-Password -->
         <div class="col-xs-12 padding-bottom-32">
-          <div class="form-group">
+          <div class="form-group has-feedback">
             <label for="password-repeat">Password</label>
-            <input type="password" class="form-control" name="password-repeat" title="Minimum 6 characters" placeholder="Password (minimum 6 characters)">
+            <input type="password" class="form-control" name="password-repeat" title="Minimum 6 characters" placeholder="Password (minimum 6 characters)" required>
           </div>
         </div>
 

@@ -42,6 +42,7 @@ class API extends Controller
         break;
 
       case 'post':
+        User::create();
         break;
 
       case 'put':
@@ -50,6 +51,8 @@ class API extends Controller
       case 'delete':
         break;
     }
+
+
   } // end user()
 
   public function get_response($status = STATUS_BAD_REQUEST, $data = [])

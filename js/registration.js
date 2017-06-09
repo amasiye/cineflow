@@ -21,3 +21,14 @@ function proceedToReviewPage(obj) {
 
   return true;
 } // end proceedToReviewPage()
+
+
+function validate() {
+  var isOK = true;
+
+  $('[name=first-name], ['lsa']').on('change', function() {
+
+  });
+
+  return isOK;
+}
