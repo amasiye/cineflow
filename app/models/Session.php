@@ -33,6 +33,22 @@ class Session
         Router::redirect(BASEPATH . 'login/');
       }
     } // end handle_authorization()
+
+    public function create($user_id, $hash, $expires)
+    {
+
+    } // end create()
+
+    public function get_from_hash($hash)
+    {
+      global $db;
+      return $db->select('*/' . TABLE_SESSIONS . "/session_hash='${$hash}'");
+    } // end get_from_hash()
+
+    public static function exists($hash)
+    {
+      return false;
+    } // end exists()
 } // end Session()
 
 ?>

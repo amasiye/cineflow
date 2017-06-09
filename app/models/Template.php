@@ -20,22 +20,52 @@ class Template implements iModel
 
   }
 
-  public static function head($header = 'header.php')
+  public static function head($header = 'header')
   {
     if(empty($header))
     {
       die("Header file is <strong><u>not defined</u></strong> on line 8 of " . $_SERVER['SCRIPT_FILENAME']);
     }
-    require_once 'includes/' . $header;
+
+    if(streq('.php', substr($header, -4)))
+    {
+      $header = str_ireplace('.php', '', $header);
+    }
+
+    require_once 'includes/' . $header . '.php';
   } // end head()
 
-  public static function foot($footer = 'footer.php')
+  public static function body($view = 'home/index')
+  {
+    if(empty($view))
+    {
+      die("Template file is <strong><u>not defined</u></strong> on line 8 of " . $_SERVER['SCRIPT_FILENAME']);
+    }
+
+    if(streq('.php', substr($view, -4)))
+    {
+      $view = str_ireplace('.php', '', $view);
+    }
+
+    require_once 'app/views/' . $view . '.php';
+  }
+
+  /**
+   * Ends the template file
+   */
+  public static function foot($footer = 'footer')
   {
     if(empty($footer))
     {
       die("Footer file is <strong><u>not defined</u></strong> close to line " . __LINE__ . " of " . $_SERVER['SCRIPT_FILENAME']);
     }
-    require_once 'includes/' . $footer;
+
+    if(streq('.php', substr($footer, -4)))
+    {
+      $footer = str_ireplace('.php', '', $footer);
+    }
+
+    require_once 'includes/' . $footer . '.php';
   } // end foot()
 
   public static function load_styles($paths, $delimiter = ';')
@@ -67,12 +97,12 @@ class Template implements iModel
   {
     if(empty($paths))
     {
-      die("Invalid path value '{$paths}' close to line " . __LINE__ . " of " . $_SERVER['SCRIPT_FILENAME']);
+      die("Invalid path value close to line " . __LINE__ . " of " . $_SERVER['SCRIPT_FILENAME']);
     }
 
     if(empty($delimiter))
     {
-      die("Invalid delimeter value '{$delimeter}' close to line " . __LINE__ . " of " . $_SERVER['SCRIPT_FILENAME']);
+      die("Invalid delimeter value close to line " . __LINE__ . " of " . $_SERVER['SCRIPT_FILENAME']);
     }
 
     $paths = explode($delimiter, $paths);

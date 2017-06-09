@@ -19,7 +19,7 @@ class Router
 
   public static function resolve_content_type()
   {
-    $url = (isset($_GET['url']) && !empty($_GET['url']))? $_GET['url'] : "";
+    $url = ((isset($_GET['url']) && !empty($_GET['url']))? $_GET['url'] : "");
     $mime_type = substr($url, -4);
     $content_type = '';
 
@@ -53,9 +53,6 @@ class Router
         header('Content-Type: text/html');
         break;
     }
-    // substr($url, (strrpos($url, '.jpg')));
-
-    echo $mime_type;
   } // end resolve_content_type()
 } // end Router{}
 

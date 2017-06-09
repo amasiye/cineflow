@@ -11,10 +11,11 @@
 
     <title><?= APP_NAME; ?></title>
     <base href="<?= BASEPATH; ?>">
+    <link rel="icon" href="icon.png" type="image/png" sizes="16x16">
 
     <?php Template::load_styles(SRC_CSS_BOOTSTRAP . ';' . SRC_CSS_FONTAWESOME . ';css/cineflow.css'); ?>
 
     <?php Template::load_scripts(SRC_JS_JQUERY . ';' . SRC_JS_BOOTSTRAP . '; js/cineflow.js'); ?>
 
   </head>
-  <body>
+  <body id="body">
