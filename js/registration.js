@@ -26,7 +26,7 @@ function proceedToReviewPage(obj) {
 function validate() {
   var isOK = true;
 
-  $('[name=first-name], ['lsa']').on('change', function() {
+  $('[name=first-name], [name=last-name]').on('change', function() {
 
   });
 
